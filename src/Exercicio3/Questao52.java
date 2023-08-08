@@ -7,12 +7,10 @@ public class Questao52 {
     public static void main(String[] args) {
 
         BigInteger totalGraos = BigInteger.ZERO, graosCasa = BigInteger.ONE;
-
         for (int i = 1; i <= 64; i++) {
             totalGraos = totalGraos.add(graosCasa);
             graosCasa = graosCasa.multiply(BigInteger.valueOf(2));
         }
-
         BigInteger totalSacosArroz = totalGraos.divide(BigInteger.valueOf(50000)); //Dizendo que um saco de arroz de 1kg tem 50000 grãos
         BigInteger totalEmReais = totalSacosArroz.multiply(BigInteger.valueOf(8));
 
